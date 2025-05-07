@@ -16,8 +16,8 @@ export function HomePage({navigation}: {navigation: any}) {
             />
             <View style={styles.overlay}>
                 <View style={styles.logoContainer}>
-                    <Image style={styles.logoImg} source={require("../../assets/images/fielUp.png")} />
-                    <Text style={styles.fieldUp}>Field Up</Text>
+                    <Image style={styles.logoImg} source={require("../../assets/images/isotipo_positivo.png")} />
+                    <Text style={styles.fieldUp}>FairPlay</Text>
                 </View>
                 <Text style={styles.title}>Únete a la mayor comunidad de deportistas</Text>
                 <Text style={styles.subtitle}>Y encuentra tu partido perfecto</Text>
@@ -28,9 +28,11 @@ export function HomePage({navigation}: {navigation: any}) {
                     <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('LoginPage')}>
                         <Text style={styles.buttonText1}>Iniciar Sesión</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('MainTabs', { screen: 'UserDetails' })}>
-                        <Text style={styles.buttonText1}>Iniciar Sesión</Text>
+                    <TouchableOpacity style={styles.buttonLogin} onPress={() => navigation.navigate('MainTabs')}>
+                        <Text style={styles.buttonText1}>Entrar</Text>
                     </TouchableOpacity>
+                   
+                    
                    
                 </View>
                 <View style={styles.socialIcons}>
@@ -72,6 +74,7 @@ const styles = StyleSheet.create({
         color: "#FFF",
         textAlign: "left",
         paddingHorizontal: width * 0.08,
+        fontFamily: 'Coolvetica-Regular',
     },
     subtitle: {
         fontSize: width * 0.035,
@@ -124,8 +127,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     logoImg: {
-        width: width * 0.3,
-        height: height * 0.08,
+        width: width * 0.16,
+        height: height * 0.09,
     },
     logoContainerSocial: {
         flexDirection: "row",  
@@ -137,8 +140,8 @@ const styles = StyleSheet.create({
     fieldUp: {
         color: "white",
         fontSize: width * 0.07,
-        marginLeft: -30,
-        paddingRight: 225,
+        marginLeft: 0,
+        paddingRight: 215,
         alignSelf: "center"
     },
     logoContainer: {
